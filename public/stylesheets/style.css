@@ -34,9 +34,9 @@ input::-webkit-input-speech-button {
 
 /*这里开始*/
 form {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*transform: translateY(-50%);*/
   text-align: center;
   padding: 0 2vw;
 }
@@ -44,7 +44,7 @@ label {
   display: block;
   color: #344ecc;
 }
-input {
+textarea {
   box-sizing: border-box;
   display: block;
   width: 96vw;
@@ -56,10 +56,13 @@ input {
 }
 button {
   border-radius: 2px;
-  border:  1px solid #344ecc;
+  border:  1px solid transparent;
   padding: 5px 20px;
   background-color: #344ecc;
   color: white;
+  margin: 0 2vw;
   font-family: 'fzltxh','NotoSansHans-Regular','AvenirNext-Regular',arial,'Hiragino Sans GB', "Microsoft Yahei","Hiragino Sans GB","WenQuanYi Micro Hei",sans-serif;
-
+}
+button[type="reset"] {
+  background-color: #8e8e8e;
 }
