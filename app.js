@@ -8,15 +8,19 @@ const json = require('koa-json');
 const onerror = require('koa-onerror');
 const bodyparser = require('koa-bodyparser')();
 const logger = require('koa-logger');
+const favicon = require('koa-favicon');
 
 const index = require('./routes/index');
 const users = require('./routes/users');
+
 
 // middlewares
 app.use(convert(bodyparser));
 app.use(convert(json()));
 app.use(convert(logger()));
 app.use(require('koa-static')(__dirname + '/public'));
+app.use(favicon(__dirname + '/images/favicon.ico'));
+
 
 app.use(views(__dirname + '/views', {
   extension: 'pug'
