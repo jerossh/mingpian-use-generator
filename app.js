@@ -19,7 +19,7 @@ app.use(convert(logger()));
 app.use(require('koa-static')(__dirname + '/public'));
 
 app.use(views(__dirname + '/views', {
-  extension: 'jade'
+  extension: 'pug'
 }));
 
 // logger
