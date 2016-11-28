@@ -5,13 +5,11 @@
 // // 暂时不支持Windows
 // require('runkoa')(current_path + '/bin/www' )
 
-
+// const platform = process.platform;
 require("babel-core/register")(
     {
         presets: ['stage-3','es2015']
     }
 );
-
 require("babel-polyfill");
-
 require("./www");
